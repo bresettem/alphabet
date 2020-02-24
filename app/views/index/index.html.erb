@@ -8,7 +8,7 @@
   </tr>
   <% ("A".."Z").each do |letter| %>
     <tr>
-      <th><%= check_box("post", "complete") %></th>
+      <th><%= check_box_tag "completed", 1, false, autocomplete: 'off' %></th>
       <th><%= letter %></th>
       <td>
         <%= male(letter) %>
