@@ -1,3 +1,21 @@
 <h1>Alphabet</h1>
-
-<p>Mail <%=  %></p>
+<table border="1">
+  <tr>
+    <th></th>
+    <th></th>
+    <th>Male</th>
+    <th>Female</th>
+  </tr>
+  <% ("A".."Z").each do |letter| %>
+    <tr>
+      <th><%= check_box("post", "complete") %></th>
+      <th><%= letter %></th>
+      <td>
+        <%= male(letter) %>
+      </td>
+      <td>
+        <%= female(letter) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
