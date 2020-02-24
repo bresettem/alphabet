@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+
+gem 'faker'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
