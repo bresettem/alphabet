@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
-
+# Generates Fake Female/Male names
 gem 'faker'
+
+# Hides sensitive information
+gem 'figaro'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
@@ -9,7 +12,7 @@ ruby '2.6.5'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
-# Use pg as the database for Active Record
+# Use Postgres as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
