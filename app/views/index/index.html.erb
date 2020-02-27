@@ -8,17 +8,17 @@
   </tr>
   <% ("A".."Z").each do |letter| %>
     <tr>
-      <th scope="row" class="col-1">
+      <th scope="row">
         <div class="form-check">
           <%= check_box_tag "letter_#{letter}", 1, false, autocomplete: 'off', class: 'form-check-input' %>
           <%= label :letter, "#{letter}", class: 'form-check-label' %>
         </div>
       </th>
       <td>
-        <%= male(letter) %>
+        <span><%= male(letter) %></span>
       </td>
       <td>
-        <%= female(letter) %>
+        <span><%= female(letter) %></span>
       </td>
     </tr>
   <% end %>
