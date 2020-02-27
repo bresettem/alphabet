@@ -1,15 +1,19 @@
 <h1>Alphabet Challenge</h1>
-<table border="1">
+
+<table class="table table-striped table-bordered">
   <tr>
-    <th></th>
-    <th></th>
-    <th>Male</th>
-    <th>Female</th>
+    <th scope="col">Letter</th>
+    <th scope="col">Male</th>
+    <th scope="col">Female</th>
   </tr>
   <% ("A".."Z").each do |letter| %>
     <tr>
-      <th><%= check_box_tag "completed", 1, false, autocomplete: 'off' %></th>
-      <th><%= letter %></th>
+      <th scope="row" class="col-1">
+        <div class="form-check">
+          <%= check_box_tag "letter_#{letter}", 1, false, autocomplete: 'off', class: 'form-check-input' %>
+          <%= label :letter, "#{letter}", class: 'form-check-label' %>
+        </div>
+      </th>
       <td>
         <%= male(letter) %>
       </td>
