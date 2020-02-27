@@ -4,6 +4,12 @@ gem 'faker'
 
 # Hides sensitive information
 gem 'figaro'
+
+# Adds bootrap for formatting
+gem 'bootstrap'
+
+# Bootstrap JavaScript depends on jQuery
+gem 'jquery-rails'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
